@@ -1,0 +1,13 @@
+{
+  "name": "Finance-Discord",
+  "version": "1.0.0",
+  "description": "Discord Bot to create and calculate budget for projects",
+  "main": "index.js",
+  "author": "Gabriel Gomes",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.13"
+  }
+}
