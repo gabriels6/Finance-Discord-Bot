@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const Commands = require("./Data/Commands.js");
 const Connection = require("./Data/Connection");
-const config = require("./config.json");
+//const config = require("./config.json");
 require('dotenv').config({path:__dirname + '/../.env'});
 
 
