@@ -9,5 +9,8 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "mongoose": "^5.11.13"
+  },
+  "scripts": {
+    "start": "node src/index.js"
   }
 }
