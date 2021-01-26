@@ -31,9 +31,23 @@ Client.on("message", function(message){
 
     const guildName = message.guild.name;
 
+    if(command === "help"){
+        var embed = new Discord.MessageEmbed()
+            .setTitle("Ec0n0my Bot Helper")
+            .setDescription("See commands Here")
+            .setColor("#17a2b8");
+
+        embed.addFields({name:"Add guild to finance bot",value:"!add-finance <initial-budget-value>",inline:false});
+        embed.addFields({name:"Get the main view of the finances of your guild",value:"!get-finance",inline:false});
+        embed.addFields({name:"Add expense for your project",value:"!add-expense <value> <name>",inline:false});
+        embed.addFields({name:"Remove expense by name",value:"!remove-expense <expense-name>",inline:false});
+        
+        message.channel.send(embed);
+    }
+
     if(command === "add-finance"){
 
-        //Structure: !addGuild <budget>
+        //Structure: !add-finance <budget>
         
         if(args.length === 0) return ;
 
