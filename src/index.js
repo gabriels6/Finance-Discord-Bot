@@ -154,7 +154,7 @@ Client.on("message", function(message){
 
         if(args.length != 1) return;
 
-        (Commands.UpdateBudget(args[0]));
+        (Commands.UpdateBudget(guildName,args[0]));
 
         setTimeout(() => {
             var embed = new Discord.MessageEmbed()
