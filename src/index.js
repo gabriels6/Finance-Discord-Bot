@@ -41,6 +41,7 @@ Client.on("message", function(message){
         embed.addFields({name:"Get the main view of the finances of your guild",value:"!get-finance",inline:false});
         embed.addFields({name:"Add expense for your project",value:"!add-expense <value> <name>",inline:false});
         embed.addFields({name:"Remove expense by name",value:"!remove-expense <expense-name>",inline:false});
+        embed.addFields({name:"Update budget Value",value:"!update-budget <budget-value>",inline:false});
         
         message.channel.send(embed);
     }
@@ -145,6 +146,25 @@ Client.on("message", function(message){
 
             message.channel.send(embed);
         },2000);
+    }
+
+    if(command === "update-budget"){
+
+        //structure !update-budget <budget-value>
+
+        if(args.length != 1) return;
+
+        (Commands.UpdateBudget(args[0]));
+
+        setTimeout(() => {
+            var embed = new Discord.MessageEmbed()
+            .setTitle("Success!")
+            .setDescription("Budget Switched!")
+            .setColor("#51f542");
+
+            message.channel.send(embed);
+        },2000);
+
     }
 });
 

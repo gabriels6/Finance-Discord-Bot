@@ -12,6 +12,12 @@ module.exports = {
 
         return Guild;
     },
+    async UpdateBudget(guildName,Budget){
+
+        const result = await GuildModel.updateOne({Name:guildName},{Budget:Budget});
+
+        return result;
+    },
 
     async GetGuild(guildName){
 
